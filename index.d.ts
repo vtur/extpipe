@@ -1,0 +1,2 @@
+export function pipe(pool: any, ...args: Array<[function: (pool: any) => any, result: string | string[]]>): any;
+export function pipePerfomance(pool: any, ...args: Array<[function: (pool: any) => any, result: string | string[]]>): any;
