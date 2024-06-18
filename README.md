@@ -34,7 +34,7 @@ Let's take a look on main function:
 ```js
 function pipe(pool: any, ...args: Array<[function: (pool: any) => any, result: string | string[]]>): any;
 ```
-First argument of the function is pool of initial pipe variables which going to be available in any function in the pipe  
+First argument of the function is pool of initial pipe variables which going to be available in any function in the pipe.  
 After pool argument here can be as much args as you want, all of them is arrays with:
   1) executable functions (sync or async), as 1st element of the array 
   2) -name for result which going to be write in the pool, as 2nd element of the array
