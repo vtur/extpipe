@@ -34,7 +34,7 @@ Let's take a look on main function:
 ```js
 function pipe(pool: any, ...args: Array<[function: (pool: any) => any, result: string | string[]]>): any;
 ```
-First argument of the function is pool of initial pipe variables which going to be available in any function in the pipe
+First argument of the function is pool of initial pipe variables which going to be available in any function in the pipe  
 After pool argument here can be as much args as you want, all of them is arrays with:
   1) executable functions (sync or async), as 1st element of the array 
   2) -name for result which going to be write in the pool, as 2nd element of the array
@@ -58,8 +58,8 @@ const { result } = pipe(
     [formatResult, 'result']
 )
 ```
-In this case functions getUsers and getUsersWorkloadSum will be executed inside of Promise.all results going to be write in the pool in the same way.
-Here is one restriction: results soing to be write in the pool only after getUsers and getUsersWorkloadSum will be complete, so we can't have access to users pool variable in getUsersWorkloadSum
+In this case functions getUsers and getUsersWorkloadSum will be executed inside of Promise.all results going to be write in the pool in the same way.  
+Here is one restriction: results soing to be write in the pool only after getUsers and getUsersWorkloadSum will be complete, so we can't have access to users pool variable in getUsersWorkloadSum  
 
 #####  Pipe perfomance:
 ```js
